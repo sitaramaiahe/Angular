@@ -1,0 +1,34 @@
+﻿<table *ngIf="employee" class="table table-responsive-md table-hover">
+    <thead>
+        <tr>
+            <th colspan="2">
+                Employee Details
+            </th>
+        </tr>
+    </thead>
+    <tbody class="btn-group-justified">
+        <tr class="bg-success">
+            <td>Employee Code</td>
+            <td>{{employee.code}}</td>
+        </tr>
+        <tr class="bg-danger">
+            <td>Name</td>
+            <td>{{employee.name}}</td>
+        </tr>
+        <tr class="bg-info">
+            <td>Gender</td>
+            <td>{{employee.gender}}</td>
+        </tr>
+        <tr class="bg-primary">
+            <td>Annual Salary</td>
+            <td>{{employee.annualSalary}}</td>
+        </tr>
+        <tr class="bg-warning">
+            <td>Date of Birth</td>
+            <td>{{employee.dateOfBirth}}</td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="!employee">
+    {{statusMessage}}
+</div>
